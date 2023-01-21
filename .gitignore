@@ -13,6 +13,7 @@
 /out/
 
 #config
+.env*.local
 ./next.config.js
 
 # production
