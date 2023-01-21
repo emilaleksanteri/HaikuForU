@@ -15,26 +15,30 @@ export default function GivePromts(props: propTypes) {
     event.preventDefault()
 
     const findDulplicate = props.promts.find(p => p === param)
-    if (!findDulplicate) { // do not allow duplicates
+    if (!findDulplicate && param.length > 0) { // do not allow duplicates and empty strings
       props.setPromts(props.promts.concat(param))
     }
     setParam('')
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className='topicsInputContainer'>
+      <form onSubmit={handleSubmit} className='topicsForm'>
+        <label className='topicsLabel'>
           Topic:
-          <input
-            type='text'
-            value={param}
-            onChange={handleChange}
-            name='param'
-            placeholder="Haiku about..."
-          />
-        </div>
-        <button type="submit">Add Topic</button>
+        </label>
+        <input className="topicsInput"
+          type='text'
+          value={param}
+          onChange={handleChange}
+          name='param'
+          placeholder="Haiku about..."
+        />
+        <button type="submit" className="topicsSubmit">Add</button>
       </form>
+      {
+      props.promts.length > 0 
+        ? <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button> 
+        : null}
     </div>
   )
 }
