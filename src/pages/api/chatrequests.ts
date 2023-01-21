@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from 'openai'
 
 const configuration = new Configuration({
   organization: 'org-VH90biEnCK2gyFHj3909q8HS',
-  apiKey: process.env.chat_api,
+  apiKey: process.env.NEXT_PUBLIC_chat_api,
 })
 
 const opneai = new OpenAIApi(configuration) // set headers for API

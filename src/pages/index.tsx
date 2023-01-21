@@ -7,6 +7,7 @@ import ClreateClear from './components/CreateClear'
 export default function Home() {
   const [promts, setPromts] = useState([]) // params for API
   const [haiku, setHaiku] = useState('') // returned from API'
+  console.log(process.env.NEXT_PUBLIC_chat_api)
 
   const removePromt = (promt: String) => {
     setPromts(promts.filter(p => p !== promt))
@@ -31,12 +32,12 @@ export default function Home() {
         <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className='svgContainer'>
             <defs>
               <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-              <stop id="stop1" stop-color="rgba(109, 40, 217, 1)" offset="0%"></stop>                            
-              <stop id="stop2" stop-color="rgba(221, 214, 254, 1)" offset="100%"></stop>                        
+              <stop id="stop1" stopColor="rgba(109, 40, 217, 1)" offset="0%"></stop>                            
+              <stop id="stop2" stopColor="rgba(221, 214, 254, 1)" offset="100%"></stop>                        
               </linearGradient>                    
             </defs>                
             <path fill="url(#sw-gradient)" d="M15.5,-21.4C20.6,-17.8,25.3,-13.8,30.4,-7.6C35.5,-1.5,40.9,6.8,39.5,13.4C38.1,20,29.9,25,22.2,29.9C14.5,34.9,7.2,39.9,-0.7,41C-8.7,42,-17.4,39,-21,32.7C-24.6,26.3,-23,16.7,-22.5,9.4C-22,2.2,-22.5,-2.6,-22.5,-8.7C-22.4,-14.8,-22,-22.2,-18.1,-26.2C-14.3,-30.2,-7.2,-30.8,-0.9,-29.5C5.3,-28.2,10.5,-25,15.5,-21.4Z"
-              transform="translate(50 50)" className='svgBlob' stroke-width="0" stroke="url(#sw-gradient)">
+              transform="translate(50 50)" className='svgBlob' strokeWidth="0" stroke="url(#sw-gradient)">
             </path>              
           </svg>
         </div>
