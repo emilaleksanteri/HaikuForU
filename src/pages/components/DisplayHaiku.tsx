@@ -3,14 +3,14 @@ interface propTypes{
 }
 
 export default function DisplayHaiku(props : propTypes) {
-  const haikuSplit = props.haiku.split(',') // So haiku can be displayed on 3 lines
+  const haikuSplit = props.haiku.split(',') // So haiku can be displayed on lines
   
   if (props.haiku.length > 0) {
     return (
-      <div>
-        <h3>Haiku for you:</h3>
+      <div className="haikuContainer">
+        <h3 className="haikuHeader">Haiku for you:</h3>
         {haikuSplit.map(haiku => (
-          <ul key={haiku}>{haiku}</ul>
+          <ul key={haiku} className='haiku'>{haiku}</ul>
         ))}
       </div>
     )

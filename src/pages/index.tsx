@@ -3,16 +3,24 @@ import GivePromts from './components/GivePromts'
 import Promts from './components/Promts'
 import DisplayHaiku from './components/DisplayHaiku'
 import ClreateClear from './components/CreateClear'
+import Loader from './components/Loader'
 
 export default function Home() {
   const [promts, setPromts] = useState([]) // params for API
   const [haiku, setHaiku] = useState('') // returned from API'
-  console.log(process.env.NEXT_PUBLIC_chat_api)
+  const [loading, setLoading] = useState(false)
 
   const removePromt = (promt: String) => {
     setPromts(promts.filter(p => p !== promt))
   }
 
+  const haikuAboutHeader = () => {
+    if (promts.length > 0) {
+      return <h3 className='haikuAbout'>Haiku About:</h3> 
+    }
+
+    return null
+  }
   return (
     <div>
       <h1 className='mainheading'>Make Haikus</h1>
@@ -45,16 +53,16 @@ export default function Home() {
       <GivePromts setPromts={setPromts} promts={promts} />
 
       {
-      promts.length > 0
-        ? <h3>Haiku about:</h3> 
-        : null
+        haikuAboutHeader()
       }
-      
-      {promts.map(prompt => (
+      <div className='promtContainerAll'>
+        {promts.map(prompt => (
         <Promts key={prompt} prompt={prompt} setPromts={setPromts} removePromt={removePromt}/>
-      ))}
+        ))}
+      </div>
+      <Loader loading={loading} />
       <DisplayHaiku haiku={haiku} />
-      <ClreateClear haiku={haiku} setHaiku={setHaiku} promts={promts} />
+      <ClreateClear setLoading={setLoading} haiku={haiku} setHaiku={setHaiku} promts={promts} />
     </div>
   )
 }
