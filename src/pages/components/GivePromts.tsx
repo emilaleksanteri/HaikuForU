@@ -15,7 +15,7 @@ export default function GivePromts(props: propTypes) {
     event.preventDefault()
 
     const findDulplicate = props.promts.find(p => p === param)
-    if (!findDulplicate && param.length > 0) { // do not allow duplicates and empty strings
+    if (!findDulplicate && param !== '') { // do not allow duplicates and empty strings
       props.setPromts(props.promts.concat(param))
     }
     setParam('')
