@@ -363,12 +363,11 @@ a {
   align-items: center;
   gap: 2%;
   margin-left: 2%;
-  margin-bottom: 10%;
-  margin-top: 4%;
-  height: 10rem;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  height: fit-content + 2rem;
   margin-right: 2%;
   flex-wrap: wrap;
-  padding: 2%;
 }
 
 .animationPromt {
@@ -395,13 +394,14 @@ a {
   opacity: 90%;
   align-items: center;
   margin-left: 1%;
+  margin-bottom: 1%;
+  z-index: 0;
 }
 
 .promt:hover {
   border-color: #E11D48;
   color: #E11D48;
   box-shadow: 0px 10px 15px #DDD6FE;
-  font-size: 200%;
   animation: removePromt 2s linear infinite, shakePromt 1.5s linear infinite;
 }
 
@@ -453,12 +453,6 @@ a {
 .promt:hover .removeSvg {
   fill: #BE123C;
   stroke: #BE123C;
-  width: 35px;
-  height: 35px;
-}
-
-.promt:hover .removeBtnPromt {
-  margin-top: 10px;
 }
 
 .createHaiku {
