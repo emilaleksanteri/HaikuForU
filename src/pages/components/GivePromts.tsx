@@ -5,7 +5,14 @@ interface propTypes{
 }
 
 const ShowRemoveBtn = ({promts, setPromts}:propTypes) => {
-  if (promts.length) {
+  const checkUndefinedLengthFix = () => {
+    if (promts.length === undefined || !promts.length) {
+      return false
+    }
+    return true
+  }
+
+  if (checkUndefinedLengthFix() === true) {
     return (
       <button onClick={() => setPromts([])} className='topicsClear'>Clear</button>
     )

@@ -55,7 +55,6 @@ export default function Home() {
         </div>
       </div>
       <GivePromts setPromts={setPromts} promts={promts} />
-
       {
         haikuAboutHeader()
       }
