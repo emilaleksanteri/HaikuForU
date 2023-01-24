@@ -9,7 +9,6 @@ export default function Home() {
   const [promts, setPromts] = useState<string[]>([]) // params for API
   const [haiku, setHaiku] = useState<string>('') // returned from API'
   const [loading, setLoading] = useState(false)
-  console.log(promts)
 
   const removePromt = (promt: String) => {
     if (promts.length > 0) {

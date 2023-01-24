@@ -347,7 +347,7 @@ a {
   align-items: center;
   gap: 2%;
   margin-left: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   margin-top: 4%;
   height: 10rem;
   margin-right: 2%;
@@ -372,7 +372,7 @@ a {
   width: fit-content;
   border-radius: 20px;
   justify-content: space-evenly;
-  font-size: 180%;
+  font-size: 150%;
   font-weight: bolder;
   border: solid #7C3AED;
   color: #7C3AED;
@@ -385,7 +385,7 @@ a {
   border-color: #E11D48;
   color: #E11D48;
   box-shadow: 0px 10px 15px #DDD6FE;
-  font-size: 250%;
+  font-size: 200%;
   animation: removePromt 2s linear infinite, shakePromt 1.5s linear infinite;
 }
 
@@ -543,6 +543,9 @@ a {
   align-items: center;
   padding: 2%;
   margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loader {
@@ -556,6 +559,8 @@ a {
 	display: grid;
 	place-items: center;
   margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .loader::before,
