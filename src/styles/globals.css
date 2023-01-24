@@ -371,7 +371,7 @@ a {
   width: fit-content;
   border-radius: 20px;
   justify-content: space-evenly;
-  font-size: 200%;
+  font-size: 180%;
   font-weight: bolder;
   border: solid #7C3AED;
   color: #7C3AED;
@@ -384,7 +384,7 @@ a {
   border-color: #E11D48;
   color: #E11D48;
   box-shadow: 0px 10px 15px #DDD6FE;
-  font-size: 300%;
+  font-size: 250%;
   animation: removePromt 2s linear infinite, shakePromt 1.5s linear infinite;
 }
 
@@ -540,7 +540,7 @@ a {
 .loadeContainer {
   width: 95%;
   align-items: center;
-  padding: 2rem;
+  padding: 2%;
   margin-left: 2%;
 }
 
