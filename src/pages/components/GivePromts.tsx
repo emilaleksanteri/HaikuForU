@@ -6,7 +6,7 @@ interface propTypes{
 
 const ShowRemoveBtn = ({promts, setPromts}:propTypes) => {
   const checkUndefinedLengthFix = () => {
-    if (promts.length === undefined || !promts.length) {
+    if (promts === undefined || !promts.length) {
       return false
     }
     return true
