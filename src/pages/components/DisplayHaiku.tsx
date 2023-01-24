@@ -2,17 +2,14 @@ interface propTypes{
   haiku: string
 }
 
-export default function DisplayHaiku(props : propTypes) {
-  if (props.haiku !== '') {
-    const haikuSplit = props.haiku.split(',') // So haiku can be displayed on lines
+export default function DisplayHaiku({ haiku }: propTypes) {
+  if (haiku !== '') {
     return (
       <div className="haikuContainer">
         <h3 className="haikuHeader">Haiku for you:</h3>
-        {haikuSplit.map(haiku => (
-          <ul key={haiku} className='haiku'>{haiku}</ul>
-        ))}
+          <p className='haiku'>{haiku}</p>
       </div>
     )
   }
-  return null
+  return <></>
 }

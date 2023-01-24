@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   const haikuAboutHeader = () => {
-    if (promts.length !== 0) {
+    if (promts.length) {
       return <h3 className='haikuAbout'>Haiku About:</h3> 
     }
 
@@ -60,9 +60,13 @@ export default function Home() {
         haikuAboutHeader()
       }
       <div className='promtContainerAll'>
-        {promts.map((prompt: string) => (
-        <Promts key={prompt} prompt={prompt} setPromts={setPromts} removePromt={removePromt}/>
-        ))}
+        {
+        promts.length
+          ? promts.map((prompt: string) => (
+          <Promts key={prompt} prompt={prompt} setPromts={setPromts} removePromt={removePromt}/>
+          ))
+          : null
+       }
       </div>
       <Loader loading={loading} />
       <DisplayHaiku haiku={haiku} />
