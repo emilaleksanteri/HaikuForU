@@ -20,6 +20,15 @@ export default function GivePromts(props: propTypes) {
     }
     setParam('')
   }
+
+  const showRemoveBtn = () => {
+    if (props.promts.length) {
+      return (
+        <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button>
+      )
+    }
+    return null
+  }
   return (
     <div className='topicsInputContainer'>
       <form onSubmit={handleSubmit} className='topicsForm'>
@@ -36,9 +45,7 @@ export default function GivePromts(props: propTypes) {
         <button type="submit" className="topicsSubmit">Add</button>
       </form>
       {
-      !props.promts.length
-        ? null 
-        : <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button>
+        showRemoveBtn()
       }
     </div>
   )
