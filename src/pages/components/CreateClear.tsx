@@ -1,5 +1,4 @@
 import chatService from '../api/chatrequests'
-import { useState } from 'react'
 
 interface propTypes{
   haiku: string

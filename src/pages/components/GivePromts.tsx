@@ -22,12 +22,12 @@ export default function GivePromts(props: propTypes) {
   }
 
   const showRemoveBtn = () => {
-    if (props.promts.length) {
+    if (props.promts.length > 0) {
       return (
         <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button>
       )
     }
-    return null
+    return <></>
   }
   return (
     <div className='topicsInputContainer'>
