@@ -10,8 +10,11 @@ export default function Home() {
   const [haiku, setHaiku] = useState<string>('') // returned from API'
   const [loading, setLoading] = useState(false)
 
-  const removePromt = (promt: String, promts: string[]) => {
-    setPromts(promts.filter(p => p !== promt))
+  const removePromt = (promt: String) => {
+    if (promts.length > 1) {
+      setPromts(promts.filter(p => p !== promt))
+    }
+    setPromts([])
   }
 
   const haikuAboutHeader = () => {

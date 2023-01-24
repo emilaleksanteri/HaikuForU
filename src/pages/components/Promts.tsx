@@ -1,5 +1,5 @@
 interface propTypes{
-  prompt: String
+  prompt: string
   setPromts: any
   removePromt: any
 }
