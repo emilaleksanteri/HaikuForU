@@ -6,21 +6,22 @@ import ClreateClear from './components/CreateClear'
 import Loader from './components/Loader'
 
 export default function Home() {
-  const [promts, setPromts] = useState([]) // params for API
-  const [haiku, setHaiku] = useState('') // returned from API'
+  const [promts, setPromts] = useState<any>(null) // params for API
+  const [haiku, setHaiku] = useState<any>(null) // returned from API'
   const [loading, setLoading] = useState(false)
 
-  const removePromt = (promt: String) => {
+  const removePromt = (promt: String, promts: String[]) => {
     setPromts(promts.filter(p => p !== promt))
   }
 
   const haikuAboutHeader = () => {
-    if (promts.length > 0) {
+    if (promts) {
       return <h3 className='haikuAbout'>Haiku About:</h3> 
     }
 
     return null
   }
+
   return (
     <div>
       <h1 className='mainheading'>Make Haikus</h1>
@@ -56,7 +57,7 @@ export default function Home() {
         haikuAboutHeader()
       }
       <div className='promtContainerAll'>
-        {promts.map(prompt => (
+        {promts.map((prompt: string) => (
         <Promts key={prompt} prompt={prompt} setPromts={setPromts} removePromt={removePromt}/>
         ))}
       </div>

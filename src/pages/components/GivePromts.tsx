@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 interface propTypes{
-  promts: Array<String>
+  promts: any
   setPromts: any
 }
 
@@ -14,7 +14,7 @@ export default function GivePromts(props: propTypes) {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
 
-    const findDulplicate = props.promts.find(p => p === param)
+    const findDulplicate = props.promts.find((p: string) => p === param)
     if (!findDulplicate && param !== '') { // do not allow duplicates and empty strings
       props.setPromts(props.promts.concat(param))
     }
