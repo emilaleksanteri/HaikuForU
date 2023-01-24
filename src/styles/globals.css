@@ -347,11 +347,12 @@ a {
   align-items: center;
   gap: 2%;
   margin-left: 2%;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 5%;
+  margin-top: 4%;
   height: 10rem;
   margin-right: 2%;
   flex-wrap: wrap;
+  padding: 2%;
 }
 
 .animationPromt {
@@ -541,7 +542,7 @@ a {
   width: 95%;
   align-items: center;
   padding: 2%;
-  margin-left: 2%;
+  margin: 2%;
 }
 
 .loader {
