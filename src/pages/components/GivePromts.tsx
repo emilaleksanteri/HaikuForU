@@ -4,6 +4,15 @@ interface propTypes{
   setPromts: any
 }
 
+const ShowRemoveBtn = ({promts, setPromts}:propTypes) => {
+  if (promts.length) {
+    return (
+      <button onClick={() => setPromts([])} className='topicsClear'>Clear</button>
+    )
+  }
+  return <></>
+}
+
 export default function GivePromts(props: propTypes) {
   const [param, setParam] = useState<string>('') // these will be added to an array of parameters given to the API
 
@@ -20,15 +29,6 @@ export default function GivePromts(props: propTypes) {
     }
     setParam('')
   }
-
-  const showRemoveBtn = () => {
-    if (props.promts.length > 0) {
-      return (
-        <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button>
-      )
-    }
-    return <></>
-  }
   return (
     <div className='topicsInputContainer'>
       <form onSubmit={handleSubmit} className='topicsForm'>
@@ -44,9 +44,7 @@ export default function GivePromts(props: propTypes) {
         />
         <button type="submit" className="topicsSubmit">Add</button>
       </form>
-      {
-        showRemoveBtn()
-      }
+      <ShowRemoveBtn promts={props.promts} setPromts={props.setPromts} />
     </div>
   )
 }
