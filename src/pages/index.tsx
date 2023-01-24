@@ -6,16 +6,16 @@ import ClreateClear from './components/CreateClear'
 import Loader from './components/Loader'
 
 export default function Home() {
-  const [promts, setPromts] = useState<any>(null) // params for API
-  const [haiku, setHaiku] = useState<any>(null) // returned from API'
+  const [promts, setPromts] = useState<string[]>([]) // params for API
+  const [haiku, setHaiku] = useState<string>('') // returned from API'
   const [loading, setLoading] = useState(false)
 
-  const removePromt = (promt: String, promts: String[]) => {
+  const removePromt = (promt: String, promts: string[]) => {
     setPromts(promts.filter(p => p !== promt))
   }
 
   const haikuAboutHeader = () => {
-    if (promts) {
+    if (promts.length !== 0) {
       return <h3 className='haikuAbout'>Haiku About:</h3> 
     }
 

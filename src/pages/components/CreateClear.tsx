@@ -20,13 +20,13 @@ export default function ClreateClear(props: propTypes) {
     props.setHaiku('')
   }
 
-  if (props.haiku.length === 0 && props.promts.length > 0) {
+  if (props.haiku === '' && props.promts.length > 0) {
     return (
       <button onClick={() => createHaiku()} className='createHaiku'>Create</button>
     )
   }
 
-  if (props.haiku.length > 0) {
+  if (props.haiku !== '') {
     return (
       <button onClick={() => removeHaiku()} className='clearHaiku'>Clear</button>
     )

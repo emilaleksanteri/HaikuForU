@@ -1,5 +1,5 @@
 interface propTypes{
-  haiku: String
+  haiku: string
 }
 
 export default function DisplayHaiku(props : propTypes) {
