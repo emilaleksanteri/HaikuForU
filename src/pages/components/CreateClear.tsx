@@ -2,8 +2,8 @@ import chatService from '../api/chatrequests'
 import { useState } from 'react'
 
 interface propTypes{
-  haiku: String
-  promts: Array<String>
+  haiku: string
+  promts: string[]
   setHaiku: any
   setLoading: any
 }

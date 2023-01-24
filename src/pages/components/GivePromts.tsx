@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 interface propTypes{
-  promts: any
+  promts: string[]
   setPromts: any
 }
 
 export default function GivePromts(props: propTypes) {
-  const [param, setParam] = useState('') // these will be added to an array of parameters given to the API
+  const [param, setParam] = useState<string>('') // these will be added to an array of parameters given to the API
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setParam(event.target.value)
