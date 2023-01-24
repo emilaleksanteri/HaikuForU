@@ -216,7 +216,9 @@ a {
   align-items: center;
 }
 
-
+.spacesInput {
+  width: 10%;
+}
 
 .topicsForm {
   color: #7C3AED;
@@ -227,7 +229,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-grow: inherit;
-  justify-content:center;
+  justify-content:baseline;
   gap: 3%;
   letter-spacing: 0.2%;
 
@@ -235,11 +237,11 @@ a {
 
 .topicsLabel {
   text-transform: uppercase;
-  font-size: 180%;
+  font-size: 280%;
 }
 
 .topicsInput {
-  padding: 1%;
+  padding: 1rem;
   width: 100%;
   font-size: 150%;
   color: #7C3AED;
@@ -257,9 +259,9 @@ a {
 
 .topicsSubmit {
   border-radius: 2.5rem;
-  padding: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-size: 150%;
   text-transform: uppercase;
   letter-spacing: 0.2%;
@@ -283,6 +285,21 @@ a {
   0% {background-color: #7C3AED; color: #F5F3FF;}
   50% {filter: blur(10px);}
   100% {background-color: #DDD6FE; color: #7C3AED; filter: blur(0px);}
+}
+
+.placeHolderForClear {
+  text-transform: uppercase;
+  border-radius: 30px;
+  letter-spacing: 0.2%;
+  font-size: 120%;
+  border-radius: 30px;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 2%;
+  margin-right: 1%;
+  font-weight: bold;
+  opacity: 0%;
 }
 
 .topicsClear {
@@ -540,11 +557,12 @@ a {
 .loadeContainer {
   width: 95%;
   align-items: center;
-  padding: 2%;
+  padding: 15%;
   margin: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid black;
 }
 
 .loader {
@@ -560,6 +578,7 @@ a {
   margin: 0 auto;
   margin-bottom: 2%;
   margin-top: 2%;
+  border: solid black;
 }
 
 .loader::before,

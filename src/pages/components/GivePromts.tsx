@@ -17,7 +17,7 @@ const ShowRemoveBtn = ({promts, setPromts}:propTypes) => {
       <button onClick={() => setPromts([])} className='topicsClear'>Clear</button>
     )
   }
-  return <></>
+  return <div className="placeHolderForClear">Clear</div>
 }
 
 export default function GivePromts(props: propTypes) {
