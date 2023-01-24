@@ -212,12 +212,11 @@ a {
   opacity: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: baseline;
+  align-items: center;
 }
 
-.spacesInput {
-  width: 10%;
-}
+
 
 .topicsForm {
   color: #7C3AED;
@@ -228,7 +227,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-grow: inherit;
-  justify-content: space-evenly;
+  justify-content:center;
   gap: 3%;
   letter-spacing: 0.2%;
 
@@ -236,7 +235,7 @@ a {
 
 .topicsLabel {
   text-transform: uppercase;
-  font-size: 200%;
+  font-size: 180%;
 }
 
 .topicsInput {
