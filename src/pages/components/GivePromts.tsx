@@ -31,13 +31,14 @@ export default function GivePromts(props: propTypes) {
     event.preventDefault()
 
     const findDulplicate = props.promts.find((p: string) => p === param)
-    if (!findDulplicate && param !== '') { // do not allow duplicates and empty strings
+    if (!findDulplicate && param !== '' && props.promts.length < 5) { // do not allow duplicates and empty strings
       props.setPromts(props.promts.concat(param))
     }
     setParam('')
   }
   return (
     <div className='topicsInputContainer'>
+      <div className="spacesInput"></div>
       <form onSubmit={handleSubmit} className='topicsForm'>
         <label className='topicsLabel'>
           Topic:
