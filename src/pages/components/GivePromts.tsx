@@ -36,9 +36,10 @@ export default function GivePromts(props: propTypes) {
         <button type="submit" className="topicsSubmit">Add</button>
       </form>
       {
-      props.promts.length
-        ? <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button> 
-        : null}
+      !props.promts.length
+        ? null 
+        : <button onClick={() => props.setPromts([])} className='topicsClear'>Clear</button>
+      }
     </div>
   )
 }
