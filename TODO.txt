@@ -1,14 +1,1 @@
-Mongoose schema for haiku
 
-Mongoose schema for comments
-
-Apollo Server
-
-GraphQL schemas for:
--get Haikus
--add haiku
--view specific haiku
--like haiku
--comment on haiku
-
-GraphQL for frontend
